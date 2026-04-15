@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DSNTL3N5XD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DSNTL3N5XD');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ビューティカダンHD｜LIMITSHIFT 30 経営構造診断</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&family=DM+Mono:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --white: #f9f7f2;
+      --navy: #1a2640;
+      --navy-light: #243352;
+      --gold: #a07820;
+      --gold-light: #c49a30;
+      --text-dark: #1a2640;
+      --text-mid: #4a4744;
+      --text-light: #f9f7f2;
+      --border: rgba(160,120,32,0.25);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Serif JP', serif;
+      background: var(--white);
+      color: var(--text-dark);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    /* Progress bar */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2px;
+      background: var(--gold);
+      width: 0%;
+      z-index: 9999;
+      transition: width 0.1s linear;
+    }
+
+    /* Nav */
+    nav {
+      position: fixed;
+      top: 2px;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 40px;
+      transition: background 0.3s, backdrop-filter 0.3s;
+    }
+    nav.scrolled {
+      background: rgba(26,38,64,0.92);
+      backdrop-filter: blur(8px);
+    }
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--white);
+      letter-spacing: 0.05em;
+    }
+    .nav-divider {
+      width: 1px;
+      height: 14px;
+      background: rgba(160,120,32,0.6);
+    }
+    .nav-cta {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--gold-light);
+      border: 1px solid var(--gold);
+      padding: 8px 20px;
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      transition: all 0.2s;
+    }
+    .nav-cta:hover {
+      background: var(--gold);
+      color: var(--white);
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .hero-left {
+      background: var(--white);
+      padding: 140px 60px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+    .hero-left::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 15%;
+      bottom: 15%;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+    }
+    .kicker {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .hero-company {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.4;
+      margin-bottom: 24px;
+      letter-spacing: 0.02em;
+    }
+    .hero-h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      font-weight: 300;
+      color: var(--navy);
+      line-height: 1.4;
+      margin-bottom: 28px;
+      letter-spacing: 0.02em;
+    }
+    .hero-sub {
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 2;
+      max-width: 420px;
+      margin-bottom: 32px;
+      border-left: 2px solid var(--gold);
+      padding-left: 16px;
+    }
+    .hero-meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: #888;
+      letter-spacing: 0.08em;
+      line-height: 1.9;
+    }
+
+    .hero-right {
+      background: var(--navy);
+      padding: 140px 60px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hero-toc {
+      list-style: none;
+      margin-bottom: 48px;
+    }
+    .hero-toc li {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      color: rgba(249,247,242,0.8);
+      font-size: 13px;
+    }
+    .hero-toc li:first-child { border-top: 1px solid rgba(255,255,255,0.08); }
+    .toc-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--gold);
+      min-width: 24px;
+      letter-spacing: 0.05em;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--white);
+      padding: 18px 32px;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 13px;
+      text-decoration: none;
+      text-align: center;
+      margin-bottom: 16px;
+      transition: background 0.2s;
+      letter-spacing: 0.05em;
+    }
+    .hero-cta:hover { background: var(--gold-light); }
+    .hero-cta-sub {
+      font-size: 11px;
+      color: rgba(249,247,242,0.5);
+      font-family: 'DM Mono', monospace;
+      letter-spacing: 0.05em;
+    }
+
+    /* Section base */
+    section {
+      padding: 100px 0;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--gold);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 300;
+      color: var(--navy);
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+    .section-lead {
+      font-size: 13px;
+      color: var(--text-mid);
+      max-width: 640px;
+      line-height: 2;
+      margin-bottom: 56px;
+    }
+
+    /* S01 - Numbers */
+    .numbers-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-bottom: 40px;
+    }
+    .number-card {
+      background: var(--white);
+      border: 1px solid rgba(26,38,64,0.1);
+      padding: 36px 32px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s;
+    }
+    .number-card:hover { border-color: var(--gold); }
+    .number-card.featured {
+      background: var(--navy);
+      border-color: var(--navy);
+    }
+    .number-card.time-pressure {
+      grid-column: span 2;
+      background: linear-gradient(135deg, #1a2640 0%, #243352 100%);
+      border-color: var(--gold);
+    }
+    .card-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .card-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      font-weight: 300;
+      color: var(--navy);
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+    .number-card.featured .card-value,
+    .number-card.time-pressure .card-value {
+      color: var(--white);
+    }
+    .card-desc {
+      font-size: 12px;
+      color: var(--text-mid);
+      line-height: 1.8;
+    }
+    .number-card.featured .card-desc,
+    .number-card.time-pressure .card-desc {
+      color: rgba(249,247,242,0.7);
+    }
+    .time-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--white);
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      padding: 3px 10px;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
+    .number-card.time-pressure .card-label { color: rgba(160,120,32,0.8); }
+    .s01-closing {
+      font-size: 13px;
+      color: var(--text-mid);
+      font-style: italic;
+      border-left: 2px solid var(--gold);
+      padding-left: 20px;
+      line-height: 2;
+    }
+
+    /* S02 - Structure */
+    .s02 {
+      background: var(--navy);
+      color: var(--white);
+    }
+    .s02 .section-label { color: rgba(160,120,32,0.8); }
+    .s02 .section-title {
+      color: var(--white);
+      font-size: 30px;
+    }
+    .s02 .section-lead { color: rgba(249,247,242,0.7); }
+    .structure-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-bottom: 48px;
+    }
+    .structure-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 32px;
+      transition: all 0.3s;
+    }
+    .structure-card:hover {
+      background: rgba(160,120,32,0.08);
+      border-color: rgba(160,120,32,0.4);
+    }
+    .structure-layer {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--gold);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .structure-body {
+      font-size: 13px;
+      color: rgba(249,247,242,0.8);
+      line-height: 1.9;
+    }
+    .s02-closing {
+      border: 1px solid rgba(160,120,32,0.4);
+      padding: 32px 40px;
+      font-size: 14px;
+      color: rgba(249,247,242,0.85);
+      line-height: 2;
+      font-style: italic;
+      position: relative;
+    }
+    .s02-closing::before {
+      content: '——';
+      display: block;
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+      font-style: normal;
+    }
+
+    /* S03 - Questions */
+    .s03 { background: var(--white); }
+    .question-flow {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+      margin-bottom: 48px;
+    }
+    .question-flow::before {
+      content: '';
+      position: absolute;
+      left: 31px;
+      top: 60px;
+      bottom: 60px;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--gold), rgba(160,120,32,0.2));
+    }
+    .question-item {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 24px;
+      padding: 32px 0;
+      border-bottom: 1px solid rgba(26,38,64,0.08);
+    }
+    .question-item:last-child { border-bottom: none; }
+    .q-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      padding-top: 4px;
+    }
+    .q-content {}
+    .q-main {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+    .q-desc {
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 2;
+    }
+
+    /* Three scales - interactive */
+    .scales-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2px;
+      margin-top: 20px;
+    }
+    .scale-card {
+      background: rgba(26,38,64,0.04);
+      border: 1px solid rgba(26,38,64,0.1);
+      padding: 24px 20px;
+      cursor: pointer;
+      transition: all 0.3s;
+      position: relative;
+    }
+    .scale-card:hover, .scale-card.active {
+      background: var(--navy);
+      border-color: var(--navy);
+    }
+    .scale-card:hover .scale-name,
+    .scale-card.active .scale-name { color: var(--gold); }
+    .scale-card:hover .scale-detail,
+    .scale-card.active .scale-detail {
+      color: rgba(249,247,242,0.8);
+      max-height: 120px;
+      opacity: 1;
+    }
+    .scale-icon {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--gold);
+      letter-spacing: 0.15em;
+      margin-bottom: 8px;
+    }
+    .scale-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 8px;
+      transition: color 0.3s;
+    }
+    .scale-detail {
+      font-size: 12px;
+      color: transparent;
+      line-height: 1.8;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s;
+      opacity: 0;
+    }
+
+    /* S04 - The Question */
+    .s04 {
+      background: linear-gradient(160deg, #f9f7f2 0%, #f0ece2 100%);
+    }
+    .the-question-wrapper {
+      max-width: 800px;
+      margin: 0 auto 48px;
+      text-align: center;
+      padding: 64px 48px;
+      border: 1px solid var(--gold);
+      position: relative;
+    }
+    .the-question-wrapper::before,
+    .the-question-wrapper::after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      border-color: var(--gold);
+      border-style: solid;
+    }
+    .the-question-wrapper::before {
+      top: -1px;
+      left: -1px;
+      border-width: 2px 0 0 2px;
+    }
+    .the-question-wrapper::after {
+      bottom: -1px;
+      right: -1px;
+      border-width: 0 2px 2px 0;
+    }
+    .q-prefix {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--gold);
+      letter-spacing: 0.2em;
+      margin-bottom: 28px;
+      display: block;
+    }
+    .the-question-text {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--navy);
+      line-height: 1.8;
+      letter-spacing: 0.02em;
+    }
+    .chips-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-bottom: 40px;
+    }
+    .chip {
+      background: var(--white);
+      border: 1px solid rgba(26,38,64,0.1);
+      padding: 28px 28px;
+      transition: border-color 0.3s;
+    }
+    .chip:hover { border-color: var(--gold); }
+    .chip-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--gold);
+      letter-spacing: 0.15em;
+      margin-bottom: 10px;
+    }
+    .chip-text {
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.9;
+    }
+    .s04-invite {
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 2;
+      font-style: italic;
+    }
+
+    /* S05 - OS */
+    .s05 { background: var(--white); }
+    .os-mission {
+      background: var(--navy);
+      padding: 48px;
+      margin-bottom: 48px;
+      position: relative;
+    }
+    .os-mission-text {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 16px;
+      color: var(--white);
+      line-height: 2;
+      max-width: 700px;
+    }
+    .os-mission-text strong { color: var(--gold); }
+    .os-comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid rgba(26,38,64,0.12);
+      margin-bottom: 48px;
+    }
+    .os-col {
+      padding: 32px;
+    }
+    .os-col.kaizen { background: rgba(26,38,64,0.03); }
+    .os-col.innovation { background: var(--navy); }
+    .os-col-title {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid;
+    }
+    .os-col.kaizen .os-col-title {
+      color: var(--text-mid);
+      border-color: rgba(26,38,64,0.15);
+    }
+    .os-col.innovation .os-col-title {
+      color: var(--gold);
+      border-color: rgba(160,120,32,0.3);
+    }
+    .os-row {
+      padding: 12px 0;
+      border-bottom: 1px solid;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+    .os-col.kaizen .os-row {
+      color: var(--text-mid);
+      border-color: rgba(26,38,64,0.06);
+    }
+    .os-col.innovation .os-row {
+      color: rgba(249,247,242,0.8);
+      border-color: rgba(255,255,255,0.06);
+    }
+    .os-col.innovation .os-row:last-child,
+    .os-col.kaizen .os-row:last-child { border-bottom: none; }
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2px;
+    }
+    .feature-card {
+      padding: 32px;
+      border: 1px solid rgba(26,38,64,0.1);
+    }
+    .feature-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      font-weight: 300;
+      color: rgba(160,120,32,0.3);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .feature-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .feature-desc {
+      font-size: 12px;
+      color: var(--text-mid);
+      line-height: 1.9;
+    }
+
+    /* S06 - CTA */
+    .s06 {
+      background: var(--white);
+      border-top: 1px solid rgba(26,38,64,0.1);
+    }
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .cta-left {}
+    .cta-h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 300;
+      color: var(--navy);
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+    .cta-desc {
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 2;
+      margin-bottom: 24px;
+    }
+    .cta-value {
+      background: rgba(26,38,64,0.04);
+      border-left: 3px solid var(--gold);
+      padding: 20px 24px;
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 2;
+      margin-bottom: 24px;
+    }
+    .cta-disclaimer {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: #aaa;
+      letter-spacing: 0.05em;
+      line-height: 1.8;
+    }
+    .cta-right {
+      background: var(--navy);
+      padding: 40px;
+    }
+    .form-row { margin-bottom: 16px; }
+    .form-row label {
+      display: block;
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--gold);
+      letter-spacing: 0.12em;
+      margin-bottom: 6px;
+    }
+    .form-row input,
+    .form-row textarea,
+    .form-row select {
+      width: 100%;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: var(--white);
+      padding: 10px 14px;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-row input:focus,
+    .form-row textarea:focus {
+      border-color: var(--gold);
+    }
+    .form-row textarea { min-height: 80px; resize: vertical; }
+    .form-row input::placeholder,
+    .form-row textarea::placeholder {
+      color: rgba(255,255,255,0.3);
+      font-size: 12px;
+    }
+    .form-check {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .form-check input[type=checkbox] { accent-color: var(--gold); }
+    .form-check label {
+      font-size: 12px;
+      color: rgba(249,247,242,0.7);
+      cursor: pointer;
+    }
+    .form-submit {
+      width: 100%;
+      background: var(--gold);
+      color: var(--white);
+      border: none;
+      padding: 16px;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 14px;
+      cursor: pointer;
+      letter-spacing: 0.05em;
+      transition: background 0.2s;
+    }
+    .form-submit:hover { background: var(--gold-light); }
+    .form-note {
+      text-align: center;
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: rgba(249,247,242,0.4);
+      margin-top: 12px;
+      letter-spacing: 0.05em;
+      line-height: 1.8;
+    }
+
+    /* Success overlay */
+    .success-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(26,38,64,0.95);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    .success-overlay.show { display: flex; }
+    .success-icon {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 64px;
+      color: var(--gold);
+      margin-bottom: 24px;
+      font-weight: 300;
+    }
+    .success-msg {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 20px;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .success-sub {
+      font-size: 13px;
+      color: rgba(249,247,242,0.6);
+      max-width: 400px;
+      line-height: 2;
+    }
+    .success-close {
+      margin-top: 32px;
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 10px 28px;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      cursor: pointer;
+      letter-spacing: 0.1em;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navy);
+      padding: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-left {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: rgba(249,247,242,0.5);
+      letter-spacing: 0.08em;
+    }
+    .footer-right {
+      font-size: 11px;
+      color: rgba(249,247,242,0.4);
+    }
+
+    /* Fade-in animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-left { padding: 100px 24px 48px; }
+      .hero-right { padding: 48px 24px; }
+      .numbers-grid, .chips-grid, .structure-grid,
+      .scales-grid, .features-grid, .cta-grid { grid-template-columns: 1fr; }
+      .number-card.time-pressure { grid-column: span 1; }
+      .os-comparison { grid-template-columns: 1fr; }
+      nav { padding: 16px 20px; }
+      .container { padding: 0 20px; }
+      section { padding: 60px 0; }
+      .hero-h1 { font-size: 28px; }
+      footer { flex-direction: column; gap: 12px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<!-- Success overlay -->
+<div class="success-overlay" id="successOverlay">
+  <div class="success-icon">✦</div>
+  <div class="success-msg">対話のお申し込みを受け付けました</div>
+  <div class="success-sub">48時間以内に担当者よりご連絡いたします。<br>「違います」という答えも、私たちにとっては大切な対話です。</div>
+  <button class="success-close" onclick="document.getElementById('successOverlay').classList.remove('show')">閉じる</button>
+</div>
+
+<!-- Nav -->
+<nav id="main-nav">
+  <div class="nav-left">
+    <span>Proudfoot Japan</span>
+    <div class="nav-divider"></div>
+    <span>ビューティカダンHD　経営構造診断</span>
+  </div>
+  <a href="#cta" class="nav-cta">対話を申し込む</a>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="kicker">LIMITSHIFT 30 — 経営構造診断</div>
+    <div class="hero-company">ビューティカダンホールディングス<br>株式会社</div>
+    <h1 class="hero-h1">「花を届ける」という接点は、<br>本当にビジネスの終点なのか。</h1>
+    <p class="hero-sub">
+      御社の中期経営計画・有価証券報告書・農業関連施策・葬儀市場動向を精査する中で、外部から一つの問いが生まれました。その問いが的外れかどうかを確かめるために、このページを書きました。答えを持ってきたのではありません。問いを持ってきました。
+    </p>
+    <div class="hero-meta">
+      ビューティカダンホールディングス株式会社（3041 東証スタンダード）<br>
+      診断基準日：2025年9月<br>
+      根拠資料：有価証券報告書・決算説明資料・中期経営計画・LDT調査
+    </div>
+  </div>
+  <div class="hero-right">
+    <ul class="hero-toc">
+      <li><span class="toc-num">01</span>外部から見えた数値と問い</li>
+      <li><span class="toc-num">02</span>構造の解析</li>
+      <li><span class="toc-num">03</span>解くべき問いのプロセス</li>
+      <li><span class="toc-num">04</span>御社に投げたい問い</li>
+    </ul>
+    <a href="#cta" class="hero-cta">問いが的外れかどうかを、確かめたい</a>
+    <p class="hero-cta-sub">「違います」という答えも、私たちにとっては大切な対話です。</p>
+  </div>
+</div>
+
+<!-- S01 -->
+<section id="s01">
+  <div class="container">
+    <div class="section-label fade-in">SECTION 01</div>
+    <div class="section-title fade-in">外部から見えた数値と問い</div>
+    <p class="section-lead fade-in">公開されている数値を並べたとき、一つの問いが生まれました。なぜ売上が拡大するほど、利益が消えていくのか——それが、このページを書いた出発点です。</p>
+
+    <div class="numbers-grid">
+      <div class="number-card featured fade-in">
+        <div class="card-label">営業利益率</div>
+        <div class="card-value">▲0.1%</div>
+        <div class="card-desc">2025年6月期・営業損失 500万円。売上高は前期比8.9%増の76億円と拡大しているにもかかわらず、原材料費・輸送費・人件費の同時上昇により2期連続で実質赤字水準。同業の平安レイサービス16.4%、ティア7.6%と比較して構造的な劣後が際立つ。</div>
+      </div>
+      <div class="number-card fade-in">
+        <div class="card-label">ROE 実績 vs 中計目標</div>
+        <div class="card-value" style="color:var(--navy)">5.2%</div>
+        <div class="card-desc" style="color:var(--text-mid)">前中計最終年度の目標ROE 22.7%に対し、実績は5.2%と大幅未達。新中計でも最終年度ROE 18.5%を掲げているが、初年度の2025年6月期は営業損失に転落しており、達成への道筋が描きにくい状況にある。</div>
+      </div>
+      <div class="number-card fade-in">
+        <div class="card-label">農業内製化の現状</div>
+        <div class="card-value" style="color:var(--navy);font-size:32px;padding-top:8px">4施策<br>連打</div>
+        <div class="card-desc" style="color:var(--text-mid)">南産業買収（2023年8月）・Cultivera提携（2025年6月）・法政大学共同研究と1〜2年間で農業関連施策を4本連打。しかし農業部門に起因する収益悪化が2024年6月期決算で明示的に計上されており、商業的な成果はいまだ出ていない。</div>
+      </div>
+      <div class="number-card time-pressure fade-in">
+        <div class="time-badge">CRITICAL WINDOW</div>
+        <div class="card-label">臨界点</div>
+        <div class="card-value">2030年</div>
+        <div class="card-desc">直葬・一日葬の比率は2025年上半期に全受注の25%超（LDT株式会社調査）まで拡大しており、生花祭壇を必要としない葬儀が構造的に増え続けている。死亡者数の増加（2040年に164万人のピーク）という追い風と、1件あたりの花需要縮小という逆風が交差する「収益の臨界点」が、2030年前後にある。</div>
+      </div>
+    </div>
+
+    <p class="s01-closing fade-in">これらの数値は、御社の内側の努力を否定するものではない。ただ——外部から見ると、一つの問いが浮かんでくる。花を届けるほどコストが膨らむこの構造に、何か根本的な前提があるのではないか、と。</p>
+  </div>
+</section>
+
+<!-- S02 -->
+<section id="s02" class="s02">
+  <div class="container">
+    <div class="section-label fade-in">SECTION 02</div>
+    <div class="section-title fade-in">なぜ「花」を売っているのに、<br>「花以外」で勝負しなければならないのか</div>
+    <p class="section-lead fade-in">数字の奥にある構造を、4つの層から読み解いた。これは外部公開情報から組み立てた仮説に過ぎない。しかし、その仮説が指し示す問いは、無視しにくいものだと感じている。</p>
+
+    <div class="structure-grid">
+      <div class="structure-card fade-in">
+        <div class="structure-layer">ビジネスモデル層</div>
+        <div class="structure-body">「コストリーダー」を標榜しながら、花材原価・輸送費・人件費という3つの変動コストを同時に直受けする労働集約モデルである。大量仕入れによるコスト優位という強みが、円安・物価高・人手不足が重なる局面でコスト圧力として跳ね返ってくる構造矛盾を内包している。農業内製化はこの矛盾への応答だが、「コストの主体が市場から自社農業に移転するだけ」という新たなリスクを生んでいる。</div>
+      </div>
+      <div class="structure-card fade-in">
+        <div class="structure-layer">人材層</div>
+        <div class="structure-body">採用の核心は「生花祭壇の設営・搬出スタッフ」であり、全求人票が「未経験可・花の知識不問・体力重視」で構成されている。農業・デジタル・グリーフケアといった新領域の人材が採用戦略の中に見当たらない。「農業内製化」を中計の力点に掲げながら、農業専門人材の採用形跡が公開情報では確認できない。技術の核心をスタートアップと大学に外注しながら、社内に受け止める人材を育てていないというケイパビリティの空洞がある。</div>
+      </div>
+      <div class="structure-card fade-in">
+        <div class="structure-layer">財務層</div>
+        <div class="structure-body">売上70億円超でありながら、2期連続で利益がほぼゼロ水準。中計未達が常態化しており（前中計3年間すべてで利益が計画を下回った）、投資余力が枯渇しつつある。時価総額は約23億円（2025年11月時点）と売上規模の1/3以下であり、M&Aやアライアンスで使える株式価値が限定的。農業・デジタル・グリーフケアの三方向に投資を分散させると、どれも中途半端に終わるリスクがある。</div>
+      </div>
+      <div class="structure-card fade-in">
+        <div class="structure-layer">組織文化層</div>
+        <div class="structure-body">1974年の創業から50年、「葬儀に花を届ける」という使命を経営の核に置いてきた組織である。代表取締役社長・舛田正一氏は「花に携わる若者の雇用が生まれることに使命感を感じる」と公言しており、花という事業ドメインへの深いアイデンティティを持つ。このアイデンティティは組織の結束力の源泉である一方、「葬儀後の遺族との関係設計」という未踏領域に踏み出すことへの心理的障壁として機能している可能性がある。</div>
+      </div>
+    </div>
+
+    <div class="s02-closing fade-in">
+      これは外部公開情報から組み立てた仮説に過ぎない。<br>
+      御社の内側から見えている景色は、どう違うか——<br>
+      そこに、私たちが最もお伺いしたいことがある。
+    </div>
+  </div>
+</section>
+
+<!-- S03 -->
+<section id="s03" class="s03">
+  <div class="container">
+    <div class="section-label fade-in">SECTION 03</div>
+    <div class="section-title fade-in">解くべき問いのプロセス</div>
+    <p class="section-lead fade-in">多くの企業が、「本当に解くべき問い」を定義しないまま、既存路線の延長に戦略を描く。LimitShift 30が最初のゴールとするのは、経営者が自らの前提を疑い、「解くべき問い」をゼロから立て直せる状態になるようご支援することだ。</p>
+
+    <div class="question-flow">
+      <div class="question-item fade-in">
+        <div class="q-number">I</div>
+        <div class="q-content">
+          <div class="q-main">勝てる土俵を、どう定義するか。</div>
+          <div class="q-desc">土俵の定義とは「社会的必然性・経営者の意思決定構造・自社の固有資産」の3つが交差する領域を指す。その交差点を、御社はどう定義しているか。「葬儀向け生花専門」という定義は、誰がいつ決めたものか——そして今も有効か。</div>
+        </div>
+      </div>
+      <div class="question-item fade-in">
+        <div class="q-number">II</div>
+        <div class="q-content">
+          <div class="q-main">その土俵の中で、どの前提を倒置すると新しい市場が生まれるか。</div>
+          <div class="q-desc">業界の常識として受け入れてきた前提を意図的に崩したとき、初めて競合が存在しない空間が生まれる。御社の事業仮説は、どの前提の上に立っているか。「葬儀当日に花を届けて完結する」という前提は、倒置可能か。</div>
+        </div>
+      </div>
+      <div class="question-item fade-in">
+        <div class="q-number">III</div>
+        <div class="q-content">
+          <div class="q-main">そのアイデアは、3つの尺度に耐えられるか。</div>
+          <div class="q-desc" style="margin-bottom:16px">①が弱ければ②も③も必然的に崩れる。これが私たちが繰り返し見てきた構造だ。</div>
+          <div class="scales-grid">
+            <div class="scale-card" onclick="this.classList.toggle('active')">
+              <div class="scale-icon">① SCALE</div>
+              <div class="scale-name">前提倒置性</div>
+              <div class="scale-detail">前提を崩したとき自社だけが有利になる構造があるか。「花を葬儀当日だけに届ける」を崩したとき、50年の顧客接点はどんな資産になるか。</div>
+            </div>
+            <div class="scale-card" onclick="this.classList.toggle('active')">
+              <div class="scale-icon">② SCALE</div>
+              <div class="scale-name">代替不可性</div>
+              <div class="scale-detail">模倣できない理由が技術を超えたレイヤーにあるか。「葬儀当日の感情的接点」という経験は、デジタル企業には再現できない固有資産たりうるか。</div>
+            </div>
+            <div class="scale-card" onclick="this.classList.toggle('active')">
+              <div class="scale-icon">③ SCALE</div>
+              <div class="scale-name">自動拡張性</div>
+              <div class="scale-detail">最初の顧客が次の顧客を呼ぶメカニズムがあるか。弔いという体験は、紹介・口コミ・信頼の連鎖が最も強く機能する領域の一つではないか。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S04 -->
+<section id="s04" class="s04">
+  <div class="container">
+    <div class="section-label fade-in" style="text-align:center">SECTION 04</div>
+    <div class="section-title fade-in" style="text-align:center;max-width:none">御社に投げたい問いがある</div>
+    <p class="section-lead fade-in" style="margin:0 auto 48px;text-align:center">上記の問いのプロセスを、御社に当てはめて考えてみた。答えは出していない。ただ、一つの問いが浮かび上がってきた。</p>
+
+    <div class="the-question-wrapper fade-in">
+      <span class="q-prefix">THE QUESTION — BLOCK E</span>
+      <div class="the-question-text">
+        「"葬儀の日に花を届ける"という接点は、本当にビジネスの終点なのか。<br>それとも、遺族との10年越しの関係の、始点なのか。」
+      </div>
+    </div>
+
+    <div class="chips-grid">
+      <div class="chip fade-in">
+        <div class="chip-num">EVIDENCE 01 — 数値の事実</div>
+        <div class="chip-text">2025年6月期・営業損失転落。売上は76億円と過去最高水準に近いにもかかわらず、利益はゼロを割った。花を届けるほどコストが膨らむという構造が、2期連続で数字として現れている。</div>
+      </div>
+      <div class="chip fade-in">
+        <div class="chip-num">EVIDENCE 02 — 経営者の言葉</div>
+        <div class="chip-text">舛田社長は2025年1月のインタビューで「目先の売上や利益ではなく、長期スパンで見ていくことが大切」と語っている。だが中計は3年連続で利益未達に終わった。「長期」は今、経営の言い訳ではなく、問いとして立ち現れている。</div>
+      </div>
+      <div class="chip fade-in">
+        <div class="chip-num">EVIDENCE 03 — 市場構造の変化</div>
+        <div class="chip-text">直葬・火葬式の比率は全国平均の2〜3倍の水準で高止まりしており（2025年上半期・LDT調査）、一日葬も拡大中だ。生花祭壇の需要は、死亡者数が増えても1件あたりの花使用量が減り続けるという二重の圧力にさらされている。</div>
+      </div>
+      <div class="chip fade-in">
+        <div class="chip-num">EVIDENCE 04 — 未踏領域の空白</div>
+        <div class="chip-text">葬儀当日に遺族と花で関わった後、その関係を継続的にデザインしている生花専門企業は、国内に存在しない。命日・一周忌・お盆という日本固有の弔いの暦は、毎年繰り返される。この空白に気づいている企業は、まだいない。</div>
+      </div>
+    </div>
+
+    <p class="s04-invite fade-in">この問いに的外れな点があれば、ご指摘いただきたい。<br>答えを持ってきたのではありません。</p>
+  </div>
+</section>
+
+<!-- S05 -->
+<section id="s05" class="s05">
+  <div class="container">
+    <div class="section-label fade-in">SECTION 05</div>
+    <div class="section-title fade-in">イノベーション思考OSを、組織に植え付ける</div>
+
+    <div class="os-mission fade-in">
+      <div class="os-mission-text">
+        不確実性を武器に変える触媒。<br>
+        Proudfoot Japanは、<strong>答えを売る組織ではない</strong>。<br>
+        「解くべき問いを自力で立て、自力で解ける組織」をつくることが、私たちの本当の提供価値です。
+      </div>
+    </div>
+
+    <div class="os-comparison fade-in">
+      <div class="os-col kaizen">
+        <div class="os-col-title">カイゼンOS（多くの企業の現状）</div>
+        <div class="os-row">現在の延長線上で改善を追求する</div>
+        <div class="os-row">前提を疑わず、与えられた問いを解く</div>
+        <div class="os-row">不確実性をリスクとして排除しようとする</div>
+        <div class="os-row">イノベーションの芽がカイゼンの効率で刈り取られる</div>
+      </div>
+      <div class="os-col innovation">
+        <div class="os-col-title">イノベーション思考OS</div>
+        <div class="os-row">前提を意図的に崩し、競合のいない土俵を定義できる</div>
+        <div class="os-row">「解くべき問い」を自力で立て、検証プロセスを自走できる</div>
+        <div class="os-row">不確実性を、競合との差を生む源泉として使える</div>
+        <div class="os-row">経営者自身が「動ける問い」を持つ状態になる</div>
+      </div>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card fade-in">
+        <div class="feature-num">01</div>
+        <div class="feature-title">問いファースト</div>
+        <div class="feature-desc">答えから始まる診断ではなく、問いから始まる対話。経営者が「今まで考えていなかった」という空白感を持つことが、変化の起点になる。</div>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-num">02</div>
+        <div class="feature-title">触媒としての伴走</div>
+        <div class="feature-desc">私たちは答えを提供する専門家ではなく、経営者が自分の問いに気づくための「触媒」として機能する。解くのは、経営者自身だ。</div>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-num">03</div>
+        <div class="feature-title">OSの植え付けまで</div>
+        <div class="feature-desc">「イノベーション思考OS」を組織に根付かせることが目標。30日間の構造診断は、そのための最初のプロセスにすぎない。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S06 - CTA -->
+<section id="cta" class="s06">
+  <div class="container">
+    <div class="cta-grid">
+      <div class="cta-left">
+        <div class="section-label fade-in">SECTION 06</div>
+        <h2 class="cta-h2 fade-in">問いが的外れかどうかを、<br>教えてください</h2>
+        <p class="cta-desc fade-in">このページに書いたことは、外部公開情報だけから見えたものです。内側からしか見えないことの方が、はるかに多いはずです。「的外れです」という答えも、私たちにとっては大切な対話です。</p>
+        <div class="cta-value fade-in">私たちが30分でお伝えしたいのは、答えではありません。御社がまだ解いていない問いがあるとしたら、それはどこか——その問いを、一緒に見つけることが、この対話の目的です。</div>
+        <p class="cta-disclaimer fade-in">売り込みではありません。<br>私たちの問いが的外れなら、そう言っていただければ十分です。</p>
+      </div>
+      <div class="cta-right fade-in">
+        <form id="contact-form">
+          <div class="form-row">
+            <label>お名前 *</label>
+            <input type="text" name="name" required placeholder="柳田 晋介">
+          </div>
+          <div class="form-row">
+            <label>会社名 *</label>
+            <input type="text" name="company" required placeholder="ビューティカダンホールディングス株式会社">
+          </div>
+          <div class="form-row">
+            <label>役職</label>
+            <input type="text" name="title" placeholder="取締役">
+          </div>
+          <div class="form-row">
+            <label>メールアドレス *</label>
+            <input type="email" name="email" required placeholder="your@email.com">
+          </div>
+          <div class="form-row">
+            <label>候補日① *</label>
+            <input type="text" name="date1" required placeholder="例：5月12日（月）15:00〜">
+          </div>
+          <div class="form-row">
+            <label>候補日②</label>
+            <input type="text" name="date2" placeholder="例：5月13日（火）10:00〜">
+          </div>
+          <div class="form-row">
+            <label>候補日③</label>
+            <input type="text" name="date3" placeholder="例：5月15日（木）午後">
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="email-adjust" name="email_adjust">
+            <label for="email-adjust">メールにて日程調整を希望する</label>
+          </div>
+          <div class="form-row">
+            <label>事前コメント（任意）</label>
+            <textarea name="comment" placeholder="ご質問・ご意見があればご記入ください"></textarea>
+          </div>
+          <button type="submit" class="form-submit">対話を申し込む</button>
+          <p class="form-note">売り込みではありません。的外れなら、そう言っていただければ十分です。</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-left">Proudfoot Japan — LIMITSHIFT 30</div>
+  <div class="footer-right">本ページはビューティカダンホールディングス株式会社　取締役　柳田　晋介　様専用の資料です</div>
+</footer>
+
+<script>
+  // Progress bar
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (scrollTop / docHeight) * 100;
+    document.getElementById('progress-bar').style.width = progress + '%';
+
+    // Nav scroll effect
+    const nav = document.getElementById('main-nav');
+    if (scrollTop > 80) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+
+  // Intersection Observer for fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Form submission via Formspree (Ajax)
+  document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch('https://formspree.io/f/mjgalvdz', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        document.getElementById('successOverlay').classList.add('show');
+        form.reset();
+      } else {
+        alert('送信に問題が発生しました。恐れ入りますが、もう一度お試しください。');
+      }
+    } catch (error) {
+      alert('ネットワークエラーが発生しました。しばらくしてから再度お試しください。');
+    }
+  });
+</script>
+</body>
+</html>
